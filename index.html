@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mya Gruwell's Website</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">My Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Résumé</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hobby">Hobby Page</a></li>
+          <li class="nav-item"><a class="nav-link" href="#webapp">Web App</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header / Hero Section -->
+  <section id="home" class="container my-4 text-center">
+    <h1>Welcome to Mya Gruwell's Website</h1>
+    <p>This site showcases my skills, resume, hobbies, and a fun web app.</p>
+  </section>
+
+  <!-- Résumé Section -->
+  <section id="resume" class="container my-4">
+    <h2>Resume</h2>
+    <div class="card p-3">
+      <h3>Education</h3>
+      <ul>
+        <li>Graduated from Klein High School (2023)</li>
+        <li>University of Utah (2023-2024)</li>
+      </ul>
+      <h3>Work Experience</h3>
+      <ul>
+        <li>Lifeguard for DS recreation (2022-2024)</li>
+        <li>Team member at Fiiz Drinks (2024)</li>
+      </ul>
+      <h3>Skills</h3>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Bootstrap, React</li>
+        <li>Python, Java</li>
+        <li>Fluent in Italian</li>
+      </ul>
+      <h3>Honors & Awards</h3>
+      <ul>
+        <li>Dean's List 2023-2024</li>
+        <li>Academic All-State 2022-2023</li>
+        <li>Recipient of the Utah Flagship Scholarship (2022-2024)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Hobby / From-scratch Page Preview -->
+  <section id="hobby" class="container my-4">
+    <h2>My Hobby: Traveling</h2>
+    <a href="hobby.html">My Hobby: Traveling</a>
+    <p>Exploring the world and experiencing new cultures with my family.</p>
+  </section>
+
+  <!-- Web App Section -->
+  <section id="webapp" class="container my-4">
+    <h2>Interactive Web App: Joke Generator</h2>
+    <div class="card p-3" id="joke-app">
+      <button class="btn btn-primary" onclick="generateJoke()">Tell me a joke</button>
+      <p class="mt-3" id="jokeDisplay"></p>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Scripts -->
+  <script>
+    function generateJoke() {
+      const jokes = [
+        "Why did the scarecrow win an award? Because he was outstanding in his field!",
+        "Why don't scientists trust atoms? Because they make up everything!",
+        "What do you call fake spaghetti? An impasta!",
+        "Why did the bicycle fall over? Because it was two-tired!"
+      ];
+      const joke = jokes[Math.floor(Math.random() * jokes.length)];
+      document.getElementById('jokeDisplay').textContent = joke;
+    }
+  </script>
+
+  <h2>My Tableau Dashboard</h2>
+<!-- Paste the Tableau embed code here -->
+<div class='tableauPlaceholder' id='viz1781721904427' style='position: relative'>
+  <noscript>
+    <a href='#'>
+      <img alt='Dashboard' src='https://public.tableau.com/static/images/Th/Thestampsinmypassportv1/Dashboard/1_rss.png' style='border: none' />
+    </a>
+  </noscript>
+  <object class='tableauViz' style='display:none;'>
+    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+    <param name='embed_code_version' value='3' />
+    <param name='site_root' value='' />
+    <param name='name' value='Thestampsinmypassportv1%2FDashboard' />
+    <param name='tabs' value='no' />
+    <param name='toolbar' value='yes' />
+    <param name='static_image' value='https://public.tableau.com/static/images/Th/Thestampsinmypassportv1/Dashboard/1.png' />
+    <param name='animate_transition' value='yes' />
+    <param name='display_static_image' value='yes' />
+    <param name='display_spinner' value='yes' />
+    <param name='display_overlay' value='yes' />
+    <param name='display_count' value='yes' />
+    <param name='language' value='en-US' />
+  </object>
+</div>
+<script type='text/javascript'>
+  var divElement = document.getElementById('viz1781721904427');
+  var vizElement = divElement.getElementsByTagName('object')[0];
+  vizElement.style.width='1366px';
+  vizElement.style.height='795px';
+  var scriptElement = document.createElement('script');
+  scriptElement.src='https://public.tableau.com/javascripts/api/viz_v1.js';
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+</body>
+</html>
